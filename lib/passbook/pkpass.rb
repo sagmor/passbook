@@ -38,9 +38,7 @@ module Passbook
       def checkPass manifest
         # Check for default images
         raise 'Icon missing' unless manifest.include?('icon.png')
-        raise 'Icon@2x missing' unless manifest.include?('icon@2x.png')
         raise 'Logo missing' unless manifest.include?('logo.png')
-        raise 'Logo@2x missing' unless manifest.include?('logo@2x.png')
 
         # Check for developer field in JSON
         raise 'Pass Type Identifier missing' unless @json.include?('passTypeIdentifier')
